@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Spaceships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Make</th>
+      <th>Shipclass</th>
+      <th>Lasers</th>
+      <th>Shields</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spaceships.each do |spaceship| %>
+      <tr>
+        <td><%= spaceship.make %></td>
+        <td><%= spaceship.shipClass %></td>
+        <td><%= spaceship.lasers %></td>
+        <td><%= spaceship.shields %></td>
+        <td><%= link_to 'Show', spaceship %></td>
+        <td><%= link_to 'Edit', edit_spaceship_path(spaceship) %></td>
+        <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spaceship', new_spaceship_path %>

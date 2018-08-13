@@ -1,0 +1,37 @@
+<%= form_with(model: spaceship, local: true) do |form| %>
+  <% if spaceship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(spaceship.errors.count, "error") %> prohibited this spaceship from being saved:</h2>
+
+      <ul>
+      <% spaceship.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :make %>
+    <%= form.text_field :make %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shipClass %>
+    <%= form.text_field :shipClass %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lasers %>
+    <%= form.number_field :lasers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shields %>
+    <%= form.number_field :shields %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  make: MyString
+  shipClass: MyString
+  lasers: 1
+  shields: 1
+
+two:
+  make: MyString
+  shipClass: MyString
+  lasers: 1
+  shields: 1

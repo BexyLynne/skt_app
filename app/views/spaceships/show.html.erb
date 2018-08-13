@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @spaceship.make %>
+</p>
+
+<p>
+  <strong>Shipclass:</strong>
+  <%= @spaceship.shipClass %>
+</p>
+
+<p>
+  <strong>Lasers:</strong>
+  <%= @spaceship.lasers %>
+</p>
+
+<p>
+  <strong>Shields:</strong>
+  <%= @spaceship.shields %>
+</p>
+
+<%= link_to 'Edit', edit_spaceship_path(@spaceship) %> |
+<%= link_to 'Back', spaceships_path %>
